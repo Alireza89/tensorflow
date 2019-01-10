@@ -271,3 +271,19 @@ tf_cc_binary(
         "//tensorflow/core:protos_all_cc",
     ],
 )
+
+tf_cc_binary(
+    name = "test_live_stream",
+    srcs = [
+        "test_live_stream.cc",
+    ],
+    deps = [
+        ":recognize_commands",
+        "//tensorflow/core:core_cpu",
+        "//tensorflow/core:framework",
+        "//tensorflow/core:framework_internal",
+        "//tensorflow/core:lib",
+        "//tensorflow/core:lib_internal",
+        "//tensorflow/core:protos_all_cc",
+    ],
+)
